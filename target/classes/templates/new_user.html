@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+    	<title>Formulario</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    </head>
+
+    <body>
+
+        <!-- Page content -->
+        <div class="container">
+            <div class="page-header">
+                <h1>Nuevo Usuario</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+    				<form class="form-horizontal" role="form" th:action="@{/insert_user}" method="post">
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="firstName">* Nombre:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="firstName" required=""/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="lastName">* Apellido:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="lastName" required=""/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="username">* Usuario:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="username" name="username" placeholder="username" required=""/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="password">* Contraseña:</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="password" required=""/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="identityCard">* CI:</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control" id="identityCard" name="identityCard" placeholder="identityCard" min="0" max="9999999999" required=""/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="birthdate">* Fecha de nacimiento:</label>
+                            <div class="col-sm-8">
+                                <input type="date" class="form-control" id="birthdate" name="birthdate" required=""/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="birthplace">* Ciudad de nacimiento:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="birthplace" name="birthplace" placeholder="birthplace" required=""/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="email">* Correo:</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="email" required=""/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="phone">* Teléfono:</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control" id="phone" name="phone" placeholder="phone" min="0" max="9999999999" required=""/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="address">* Dirección:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="address" name="address" placeholder="address" required=""/>
+                            </div>
+                        </div>
+
+                        <p class="col-sm-offset-4 col-sm-8 text-danger"> * Campos obligatorios</p>
+
+                        <div class="form-group">        
+                            <div class="col-sm-offset-4 col-sm-8">
+                                <button type="submit" class="btn btn-primary">Crear Usuario</button>
+                            </div>
+                        </div>
+    				</form>	
+                </div>
+            </div>
+        </div>
+        <!-- End of page content -->
+
+		<footer class="footer">
+			<div class="container">
+				<p class="text-muted text-center">2018. Powered by alexanders_0</p>
+			</div>
+		</footer>
+
+    </body>
+</html>

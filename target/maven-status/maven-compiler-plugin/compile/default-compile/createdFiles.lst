@@ -1,0 +1,5 @@
+com/mycompany/formularioregistrousuario/User.class
+com/mycompany/formularioregistrousuario/RegistroApp.class
+com/mycompany/formularioregistrousuario/UserRepository.class
+com/mycompany/formularioregistrousuario/UserService.class
+com/mycompany/formularioregistrousuario/UserController.class

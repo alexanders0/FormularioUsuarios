@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+    	<title>Formulario</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    </head>
+
+    <body>
+
+        <!-- Page content -->
+        <div class="container">
+            <div class="page-header">
+                <h1 th:if="${user != null}" th:text="${user.getFirstName()} + ' ' + ${user.getLastName()}">Usuario</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                
+                    <div class="col-md-8">
+                        <ul id="myTab" class="nav nav-tabs">
+                            <li class="active"><a href="#datos" data-toggle="tab">Datos Personales</a></li>
+                        </ul>
+                        
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="descripcion"><br/>
+                                <dl class="dl-horizontal"><br/>
+                                    <dt>Nombre:</dt><dd th:if="${user != null}" th:text="${user.getFirstName()}"></dd>
+                                </dl>
+                                <dl class="dl-horizontal"><br/>
+                                    <dt>Apellido:</dt><dd th:if="${user != null}" th:text="${user.getLastName()}"></dd>
+                                </dl>
+                                <dl class="dl-horizontal"><br/>
+                                    <dt>Usuario:</dt><dd th:if="${user != null}" th:text="${user.getUsername()}"></dd>
+                                </dl>
+                                <dl class="dl-horizontal"><br/>
+                                    <dt>CI:</dt><dd th:if="${user != null}" th:text="${user.getIdentityCard()}"></dd>
+                                </dl>
+                                <dl class="dl-horizontal"><br/>
+                                    <dt>Lugar de Nacimiento:</dt><dd th:if="${user != null}" th:text="${user.getBirthplace()}"></dd>
+                                </dl>
+                                <dl class="dl-horizontal"><br/>
+                                    <dt>Correo:</dt><dd th:if="${user != null}" th:text="${user.getEmail()}"></dd>
+                                </dl>
+                                <dl class="dl-horizontal"><br/>
+                                    <dt>Teléfono:</dt><dd th:if="${user != null}" th:text="${user.getPhone()}"></dd>
+                                </dl>
+                                <dl class="dl-horizontal"><br/>
+                                    <dt>Dirección:</dt><dd th:if="${user != null}" th:text="${user.getAddress()}"></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of page content -->
+
+		<footer class="footer">
+			<div class="container">
+				<p class="text-muted text-center">2018. Powered by alexanders_0</p>
+			</div>
+		</footer>
+
+    </body>
+</html>
